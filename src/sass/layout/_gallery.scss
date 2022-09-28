@@ -1,0 +1,130 @@
+@use "../abstracts" as abs;
+@use "../base";
+
+.collections {
+  background-color: #131313;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 10rem 0;
+
+  h1 {
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #ff0844 0%, #f7673c 100%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .nft__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    .nft__card {
+      margin: 10px;
+      height: 375px;
+      width: 350px;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      color: #fff;
+      background: no-repeat center center;
+      background-size: cover;
+      transition: 0.3s ease-in;
+
+      &:nth-child(1) {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(20, 20, 20, 0.6) 100%
+          ),
+          url("../../assets/images/monkey-2.jpg");
+      }
+
+      &:nth-child(2) {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(20, 20, 20, 0.6) 100%
+          ),
+          url("../../assets/images/monkey-3.jpg");
+      }
+
+      &:nth-child(3) {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(20, 20, 20, 0.6) 100%
+          ),
+          url("../../assets/images/monkey-4.jpg");
+      }
+
+      &:nth-child(4) {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(20, 20, 20, 0.6) 100%
+          ),
+          url("../../assets/images/cheetah-1.png");
+      }
+
+      &:nth-child(5) {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(20, 20, 20, 0.6) 100%
+          ),
+          url("../../assets/images/cheetah-2.png");
+      }
+
+      &:nth-child(6) {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(20, 20, 20, 0.6) 100%
+          ),
+          url("../../assets/images/cheetah-3.png");
+      }
+
+      &:hover {
+        transform: scale(1.075);
+        transition: 0.3s ease-in;
+        cursor: pointer;
+      }
+
+      h2 {
+        text-align: center;
+        margin-left: 15px;
+        font-family: base.$lora-font-face;
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-family: base.$noto-sans-font-face;
+        text-align: center;
+        margin-top: 8px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        font-size: 15px;
+      }
+    }
+    @include abs.respond-to("extra-large") {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include abs.respond-to("small") {
+      grid-template-columns: 1fr;
+    }
+  }
+}

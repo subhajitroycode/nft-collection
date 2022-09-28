@@ -1,0 +1,113 @@
+@use "../abstracts" as abs;
+@use "../base";
+
+.main {
+  .main__container {
+    .main__content {
+      .newsletter-heading {
+        font-size: 3.5rem;
+        background: #8e2de2; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #4a00e0,
+          #8e2de2
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #4a00e0,
+          #8e2de2
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        background-size: 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom: 32px;
+        font-family: base.$lora-font-face;
+
+        @include abs.respond-to("large") {
+          font-size: 2.5rem;
+          margin-top: 2rem;
+        }
+
+        @include abs.respond-to("tiny") {
+          font-size: 2.4rem;
+          margin-top: 3rem;
+        }
+      }
+
+      .newsletter-subheading {
+        font-size: 1.8rem;
+
+        @include abs.respond-to("large") {
+          font-size: 1.8rem;
+        }
+
+        @include abs.respond-to("tiny") {
+          font-size: 1.4rem;
+        }
+      }
+
+      .newsletter-text {
+        margin-top: 0.6rem;
+        font-size: 1rem;
+        font-style: italic;
+
+        @include abs.respond-to("large") {
+          font-size: 1.8rem;
+        }
+
+        @include abs.respond-to("tiny") {
+          font-size: 0.8rem;
+        }
+      }
+
+      form {
+        margin-top: 20px;
+        position: relative;
+        width: 320px;
+        height: 50px;
+
+        input {
+          width: 100%;
+          height: 100%;
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          background: transparent;
+          border-radius: 50px;
+          padding-left: 1.2rem;
+          padding-right: 3.2rem;
+          color: #fff;
+          font-size: 1.2rem;
+        }
+
+        button {
+          position: absolute;
+          left: 270px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 50px;
+          height: 50px;
+          background: transparent;
+          border: none;
+          outline: none;
+          cursor: pointer;
+
+          .fa-solid {
+            font-size: 2.5rem;
+            color: #fff;
+          }
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        @include abs.respond-to("large") {
+          margin: 20px auto 0;
+        }
+      }
+    }
+  }
+}
