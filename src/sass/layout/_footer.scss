@@ -1,7 +1,7 @@
 @use "../abstracts" as abs;
 
 .footer__container {
-  background-color: #131313;
+  background-color: abs.$black;
   padding: 5rem 0;
   display: flex;
   flex-direction: column;
@@ -28,17 +28,17 @@
 
         h2 {
           margin-bottom: 16px;
-          color: #fff;
+          color: abs.$white;
         }
 
         a {
-          color: #fff;
+          color: abs.$white;
           text-decoration: none;
           margin-bottom: 0.5rem;
           transition: 0.3s ease-out;
 
           &:hover {
-            color: #e9e9e9;
+            color: abs.$bright-gray;
             transition: 0.3s ease-out;
           }
         }
@@ -73,7 +73,7 @@
       margin: 40px auto 0;
 
       .website__rights {
-        color: #fff;
+        color: abs.$white;
 
         @include abs.respond-to("medium") {
           margin-bottom: 2rem;
@@ -87,7 +87,7 @@
         width: 240px;
 
         .social__icon--link {
-          color: #fff;
+          color: abs.$white;
           font-size: 24px;
 
           @include abs.respond-to("medium") {
@@ -104,7 +104,7 @@
 }
 
 #footer__logo {
-  color: #fff;
+  color: abs.$white;
   display: flex;
   align-items: center;
   cursor: pointer;

@@ -2,7 +2,7 @@
 @use "../base";
 
 .collections {
-  background-color: #131313;
+  background-color: abs.$black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,8 +11,8 @@
   padding: 10rem 0;
 
   h1 {
-    background-color: #ff8177;
-    background-image: linear-gradient(to right, #ff0844 0%, #f7673c 100%);
+    background-color: abs.$salmon;
+    background-image: linear-gradient(to right, abs.$red 0%, abs.$pumpkin 100%);
     background-size: 100%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -38,7 +38,7 @@
       flex-direction: column;
       justify-content: flex-end;
       align-items: flex-start;
-      color: #fff;
+      color: abs.$white;
       background: no-repeat center center;
       background-size: cover;
       transition: 0.3s ease-in;
@@ -117,6 +117,11 @@
         margin-left: 15px;
         margin-bottom: 15px;
         font-size: 15px;
+      }
+
+      @include abs.respond-to("tiny") {
+        height: 325px;
+        width: 300px;
       }
     }
     @include abs.respond-to("extra-large") {

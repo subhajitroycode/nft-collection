@@ -2,7 +2,7 @@
 @use "../base";
 
 .navbar {
-  background-color: #131313;
+  background-color: abs.$black;
   height: 88px;
   display: flex;
   justify-content: center;
@@ -31,7 +31,7 @@
         height: 80px;
 
         .navbar__links {
-          color: #fff;
+          color: abs.$white;
           text-decoration: none;
           display: flex;
           align-items: center;
@@ -41,7 +41,7 @@
           transition: all 0.3s ease;
 
           &:hover {
-            color: #9518fc;
+            color: abs.$purple;
           }
 
           @include abs.respond-to("medium-large") {
@@ -75,8 +75,8 @@
           border: none;
           outline: none;
           border-radius: 4px;
-          background-color: rgba(255, 255, 255, 0.5);
-          color: #fff;
+          background-color: abs.$transparent-bg;
+          color: abs.$white;
           transition: all 0.3s ease;
 
           @include abs.respond-to("medium-large") {
@@ -103,7 +103,7 @@
         z-index: -1;
 
         &.active {
-          background-color: #131313;
+          background-color: abs.$black;
           top: 100%;
           opacity: 1;
           transition: all 0.5s ease;
@@ -123,7 +123,7 @@
           height: 3px;
           margin: 5px auto;
           transition: all 0.3s ease;
-          background: #fff;
+          background: abs.$white;
           display: block;
         }
       }
@@ -152,7 +152,7 @@
 }
 
 #navbar__logo {
-  background: #ff8177 linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background: abs.$salmon linear-gradient(to top, abs.$red 0%, abs.$peach 100%);
   background-size: 100%;
   background-clip: text;
   -webkit-background-clip: text;

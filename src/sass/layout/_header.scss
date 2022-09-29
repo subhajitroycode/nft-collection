@@ -1,7 +1,7 @@
 @use "../abstracts" as abs;
 
 .main {
-  background-color: #131313;
+  background-color: abs.$black;
   padding: 8rem 0;
 
   .main__container {
@@ -27,7 +27,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        color: #fff;
+        color: abs.$white;
         background: url("../../assets/images/cat-2.jpg") no-repeat center center;
         background-size: cover;
 
@@ -50,19 +50,23 @@
     }
 
     .main__content {
-      color: #fff;
+      color: abs.$white;
       width: 100%;
       padding-left: 20px;
 
       .main__heading {
         font-size: 50px;
         margin-bottom: 24px;
-        color: #fff;
+        color: abs.$white;
 
         span {
-          background-color: #ee0979;
-          background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
-          background: linear-gradient(to right, #ff6a00, #ee0979);
+          background-color: abs.$red-purple;
+          background: -webkit-linear-gradient(
+            to right,
+            abs.$orange,
+            abs.$red-purple
+          );
+          background: linear-gradient(to right, abs.$orange, abs.$red-purple);
           background-size: 100%;
           background-clip: text;
           -webkit-background-clip: text;
@@ -74,9 +78,9 @@
 
       .main__description {
         font-size: 25px;
-        background-color: #da22ff;
-        background: -webkit-linear-gradient(to right, #ff0844, #da22ff);
-        background: linear-gradient(to right, #ff0844, #da22ff);
+        background-color: abs.$phlox;
+        background: -webkit-linear-gradient(to right, abs.$red, abs.$phlox);
+        background: linear-gradient(to right, abs.$red, abs.$phlox);
         background-size: 100%;
         background-clip: text;
         -webkit-background-clip: text;
@@ -87,34 +91,31 @@
 
       .main__btn {
         font-size: 1.8rem;
-        // background-color: #833ab4;
-        // background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-        // background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
         padding: 20px 60px;
         border-radius: 4px;
         border: none;
         outline: none;
-        color: #fff;
+        color: abs.$white;
         margin-top: 2rem;
         cursor: pointer;
         position: relative;
         transition: all 0.35s;
-        background: #7f00ff; /* fallback for old browsers */
+        background: abs.$violet; /* fallback for old browsers */
         background: -webkit-linear-gradient(
           to right,
-          #e100ff,
-          #7f00ff
+          abs.$another-purple,
+          abs.$violet
         ); /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(
           to right,
-          #e100ff,
-          #7f00ff
+          abs.$another-purple,
+          abs.$violet
         ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
         a {
           position: relative;
           z-index: 2;
-          color: #fff;
+          color: abs.$white;
           text-decoration: none;
         }
 
@@ -125,13 +126,13 @@
           left: 0;
           width: 0;
           height: 100%;
-          background-color: #f300e4;
+          background-color: abs.$fuchsia;
           transition: all 0.35s;
           border-radius: 4px;
         }
 
         &:hover {
-          color: #fff;
+          color: abs.$white;
 
           &::after {
             width: 100%;
@@ -159,19 +160,5 @@
 
   @include abs.respond-to("tiny") {
     padding: 5rem 0;
-  }
-}
-
-#card-2 {
-  background-color: #ff512f;
-  background: linear-gradient(to right, #dd2476, #ff512f);
-  background: -webkit-linear-gradient(to right, #dd2476, #ff512f);
-
-  .fa-brands {
-    font-size: 14rem;
-  }
-
-  @include abs.respond-to("large") {
-    display: none;
   }
 }
